@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HexPh4r04h | Portfolio Card</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="/assets/favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+    
+        html, body {
+            font-family: 'Roboto Mono', monospace;
+            cursor: none;
+        }
+        .font-mono {
+            font-family: 'Roboto Mono', monospace;
+        }
+    
+        .text-shadow-cyan {
+            text-shadow: 0 0 5px var(--tw-shadow-color);
+        }
+    </style>
+    <script>
+  
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        mono: ['"Roboto Mono"', 'monospace'],
+                    },
+                    colors: {
+                        fuchsia: {
+                            400: '#c026d3',
+                            500: '#a21caf',
+                        },
+                        cyan: {
+                            300: '#67e8f9',
+                            400: '#22d3ee',
+                            500: '#06b6d4',
+                        },
+                        slate: {
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                            900: '#0f172a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-900 min-h-screen flex items-center justify-center p-4 text-slate-200 overflow-hidden">
+    <canvas id="background-canvas" class="fixed top-0 left-0 w-full h-full -z-10"></canvas>
+    <div id="cursor-dot" class="fixed w-2 h-2 bg-cyan-400 rounded-full z-[9999] pointer-events-none transform -translate-x-1/2 -translate-y-1/2 transition-transform duration-200"></div>
+    <div id="cursor-outline" class="fixed w-10 h-10 border-2 border-cyan-400 rounded-full z-[9999] pointer-events-none transform -translate-x-1/2 -translate-y-1/2 transition-all duration-200 scale-100 opacity-50"></div>
+
+    <!-- Main Portfolio Card -->
+    <div class="relative group max-w-sm w-full mx-auto bg-slate-900/70 backdrop-blur-md border border-cyan-400/30 rounded-2xl p-6 sm:p-8 text-center shadow-lg shadow-cyan-500/10 hover:shadow-cyan-500/20 transition-all duration-300 hover:-translate-y-2">
+        <!-- Corner decorations -->
+        <div class="absolute -top-1 -left-1 w-10 h-10 border-t-2 border-l-2 border-cyan-400 rounded-tl-lg opacity-60 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-300"></div>
+        <div class="absolute -bottom-1 -right-1 w-10 h-10 border-b-2 border-r-2 border-fuchsia-500 rounded-br-lg opacity-60 group-hover:-translate-x-2 group-hover:-translate-y-2 transition-transform duration-300"></div>
+
+        <!-- Avatar -->
+        <div class="relative inline-block mb-6">
+            <img class="w-32 h-32 rounded-full border-4 border-cyan-400 object-cover shadow-[0_0_15px_rgba(0,255,255,0.5),inset_0_0_10px_rgba(0,255,255,0.5)]" src="/assets/favicon.png" alt="Jass" onerror="this.onerror=null; this.src='https://placehold.co/200x200/1E293B/E0E7FF?text=Error&font=inter';">
+        </div>
+
+        <!-- Info -->
+        <h1 class="text-2xl sm:text-3xl font-bold text-white text-shadow-cyan shadow-cyan-400">Elavarasan T</h1>
+        <p class="text-fuchsia-400 font-mono text-lg mt-1">/ / HexPh4r04h</p>
+        <p class="text-cyan-400 font-medium mt-2 text-sm sm:text-base uppercase tracking-widest">[ Cybersecurity Enthusiast ]</p>
+        <p class="text-slate-400 mt-4 text-sm sm:text-base leading-relaxed">
+            Cybersecurity undergrad building innovative, forward-thinking security solutions. Passionate about cyber threat detection and defense.
+        </p>
+
+        <!-- Social Links -->
+        <div class="flex items-center justify-center space-x-2 sm:space-x-4 mt-6">
+            <a href="https://github.com/HexPh4r40h" target="_blank" rel="noopener noreferrer" class="text-slate-400 w-10 h-10 rounded-full border border-cyan-400/30 flex items-center justify-center transition-all duration-300 hover:text-cyan-400 hover:border-cyan-400 hover:bg-cyan-400/10 hover:scale-110 hover:shadow-[0_0_10px_rgba(0,255,255,0.5)]">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/elavarasan-thandapani/" target="_blank" rel="noopener noreferrer" class="text-slate-400 w-10 h-10 rounded-full border border-cyan-400/30 flex items-center justify-center transition-all duration-300 hover:text-cyan-400 hover:border-cyan-400 hover:bg-cyan-400/10 hover:scale-110 hover:shadow-[0_0_10px_rgba(0,255,255,0.5)]">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="https://wa.me/6382980470" target="_blank" rel="noopener noreferrer" class="text-slate-400 w-10 h-10 rounded-full border border-cyan-400/30 flex items-center justify-center transition-all duration-300 hover:text-cyan-400 hover:border-cyan-400 hover:bg-cyan-400/10 hover:scale-110 hover:shadow-[0_0_10px_rgba(0,255,255,0.5)]">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.894 11.892-1.99 0-3.902-.539-5.587-1.52l-6.19 1.669zm4.832-4.223l.271.165c1.533.935 3.325 1.438 5.187 1.438 5.434 0 9.855-4.421 9.856-9.856.001-5.435-4.42-9.856-9.856-9.856-5.435 0-9.855 4.421-9.856 9.856.001 1.848.508 3.626 1.425 5.161l.164.289-1.037 3.787 3.879-1.065z"/></svg>
+            </a>
+            <a href="mailto:elavarasan.thandapani@gmail.com" class="text-slate-400 w-10 h-10 rounded-full border border-cyan-400/30 flex items-center justify-center transition-all duration-300 hover:text-cyan-400 hover:border-cyan-400 hover:bg-cyan-400/10 hover:scale-110 hover:shadow-[0_0_10px_rgba(0,255,255,0.5)]">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            </a>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="mt-8 flex flex-col space-y-3">
+             <a href="mailto:elavarasan.thandapani@gmail.com" class="flex items-center justify-center gap-2 py-3 px-4 rounded-lg font-medium transition-all duration-300 relative overflow-hidden bg-cyan-400 text-slate-900 border border-cyan-400 shadow-[0_0_10px_rgba(0,255,255,0.5)] hover:shadow-[0_0_20px_rgba(0,255,255,0.5)]">
+                Get In Touch
+             </a>
+             <a href="https://www.pharoah.in.net" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 py-3 px-4 rounded-lg font-medium transition-all duration-300 relative overflow-hidden bg-transparent text-cyan-400 border border-cyan-400/30 hover:bg-cyan-400/10 hover:border-cyan-400">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.72"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.72-1.72"/></svg>
+                <span>View Portfolio</span>
+             </a>
+        </div>
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // --- Custom Cursor Logic ---
+        const cursorDot = document.getElementById('cursor-dot');
+        const cursorOutline = document.getElementById('cursor-outline');
+
+        window.addEventListener('mousemove', (e) => {
+            const posX = e.clientX;
+            const posY = e.clientY;
+
+            cursorDot.style.left = `${posX}px`;
+            cursorDot.style.top = `${posY}px`;
+
+            cursorOutline.animate({
+                left: `${posX}px`,
+                top: `${posY}px`
+            }, { duration: 500, fill: 'forwards' });
+        });
+
+        const handleMouseOver = (e) => {
+            if (e.target.closest('a, button')) {
+                cursorOutline.classList.add('scale-150', 'opacity-80');
+                cursorOutline.classList.remove('scale-100', 'opacity-50');
+            }
+        };
+        const handleMouseOut = (e) => {
+            if (e.target.closest('a, button')) {
+                cursorOutline.classList.remove('scale-150', 'opacity-80');
+                cursorOutline.classList.add('scale-100', 'opacity-50');
+            }
+        };
+
+        document.body.addEventListener('mouseover', handleMouseOver);
+        document.body.addEventListener('mouseout', handleMouseOut);
+
+        const canvas = document.getElementById('background-canvas');
+        const ctx = canvas.getContext('2d');
+        let particlesArray;
+        let animationFrameId;
+
+        function setupCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+
+        class Particle {
+            constructor(x, y, directionX, directionY, size, color) {
+                this.x = x;
+                this.y = y;
+                this.directionX = directionX;
+                this.directionY = directionY;
+                this.size = size;
+                this.color = color;
+            }
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
+                ctx.fillStyle = this.color;
+                ctx.fill();
+            }
+            update() {
+                if (this.x > canvas.width || this.x < 0) this.directionX = -this.directionX;
+                if (this.y > canvas.height || this.y < 0) this.directionY = -this.directionY;
+                this.x += this.directionX;
+                this.y += this.directionY;
+                this.draw();
+            }
+        }
+
+        function init() {
+            particlesArray = [];
+            const numberOfParticles = (canvas.height * canvas.width) / 9000;
+            for (let i = 0; i < numberOfParticles; i++) {
+                const size = (Math.random() * 2) + 1;
+                const x = (Math.random() * ((window.innerWidth - size * 2) - (size * 2)) + size * 2);
+                const y = (Math.random() * ((window.innerHeight - size * 2) - (size * 2)) + size * 2);
+                const directionX = (Math.random() * 0.4) - 0.2;
+                const directionY = (Math.random() * 0.4) - 0.2;
+                const color = 'rgba(0, 255, 255, 0.5)';
+                particlesArray.push(new Particle(x, y, directionX, directionY, size, color));
+            }
+        }
+
+        function connect() {
+            let opacityValue = 1;
+            for (let a = 0; a < particlesArray.length; a++) {
+                for (let b = a; b < particlesArray.length; b++) {
+                    const distance = ((particlesArray[a].x - particlesArray[b].x) * (particlesArray[a].x - particlesArray[b].x)) +
+                                   ((particlesArray[a].y - particlesArray[b].y) * (particlesArray[a].y - particlesArray[b].y));
+                    if (distance < (canvas.width / 7) * (canvas.height / 7)) {
+                        opacityValue = 1 - (distance / 20000);
+                        ctx.strokeStyle = `rgba(0, 255, 255, ${opacityValue})`;
+                        ctx.lineWidth = 1;
+                        ctx.beginPath();
+                        ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
+                        ctx.lineTo(particlesArray[b].x, particlesArray[b].y);
+                        ctx.stroke();
+                    }
+                }
+            }
+        }
+
+        function animate() {
+            animationFrameId = requestAnimationFrame(animate);
+            ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
+            for (let i = 0; i < particlesArray.length; i++) {
+                particlesArray[i].update();
+            }
+            connect();
+        }
+
+        const handleResize = () => {
+            setupCanvas();
+            init();
+        };
+
+        window.addEventListener('resize', handleResize);
+        
+        setupCanvas();
+        init();
+        animate();
+    });
+    </script>
+
+</body>
+</html>
